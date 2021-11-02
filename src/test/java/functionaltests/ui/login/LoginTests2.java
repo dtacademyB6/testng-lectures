@@ -20,7 +20,7 @@ public class LoginTests2  extends  TestBase{
 
     }
 
-    @Test (priority = 2)
+    @Test (priority = 2, groups = "smoke_test")
     public void testLoginUsingValidCredentials2(){
 
         driver.findElement(By.id("ctl00_MainContent_username")).sendKeys("Tester", Keys.TAB, "test", Keys.ENTER);
@@ -28,7 +28,7 @@ public class LoginTests2  extends  TestBase{
 
     }
 
-    @Test (priority = 2)
+    @Test (priority = 2, groups = {"smoke_test"})
     public void testLoginUsingInValidCredentials3(){
 
         driver.findElement(By.id("ctl00_MainContent_username")).sendKeys("TEst", Keys.TAB, "Blsld", Keys.ENTER);
@@ -36,7 +36,7 @@ public class LoginTests2  extends  TestBase{
 
     }
 
-    @Test
+    @Test (groups = "login")
     public void testLoginUsingInValidCredentials4(){
 
         driver.findElement(By.id("ctl00_MainContent_username")).sendKeys("TEst", Keys.TAB, "Blsld", Keys.ENTER);

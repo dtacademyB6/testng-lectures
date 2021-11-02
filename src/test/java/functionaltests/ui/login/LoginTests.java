@@ -5,14 +5,15 @@ import org.openqa.selenium.Keys;
 import org.testng.Assert;
 import org.testng.annotations.*;
 
-
+@Test(groups = "login")
 public class LoginTests extends TestBase{
 
 
 
 
 
-    @Test    //(priority = 0, enabled = false)
+
+    @Test   (groups = {"smoke_test"})  //(priority = 0, enabled = false)
     public void testLoginUsingValidCredentials1(){
 
 
@@ -21,7 +22,7 @@ public class LoginTests extends TestBase{
 
     }
 
-    @Test (priority = 2)
+    @Test (priority = 2, groups = "login")
     public void testLoginUsingValidCredentials2(){
 
 

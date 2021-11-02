@@ -1,0 +1,22 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+<!--suite represents your entire test suite -->
+<!--any test that lasts longer than 5 seconds in this suite will fail-->
+<suite name="Regression Tests" time-out="5000">
+<!--test represents subcategory/collection of tests under a suite e.g UI tests, API tests, DB tests -->
+    <test name="UI Tests">
+
+<!--          regression suite -->
+        <packages>
+            <package name=".*"/>
+        </packages>
+
+
+
+    </test>
+
+
+
+
+
+
+</suite>

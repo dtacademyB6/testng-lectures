@@ -18,7 +18,7 @@ public class DependencyTest {
 
     WebDriver driver;
 
-    @BeforeClass
+    @BeforeClass(alwaysRun = true)
     public void setup(){
         WebDriverManager.chromedriver().setup();
         driver = new ChromeDriver();
@@ -33,15 +33,15 @@ public class DependencyTest {
     }
 
 
-    @Test
+    @Test(groups = {"smoke_test", "login"})
     public void login(){
-        driver.findElement(By.id("ctl00_MainContent_username")).sendKeys("Teste", Keys.TAB, "test", Keys.ENTER);
+        driver.findElement(By.id("ctl00_MainContent_username")).sendKeys("Tester", Keys.TAB, "test", Keys.ENTER);
         Assert.assertTrue(driver.getTitle().equals("Web Orders"));
     }
 
 
 
-    @Test (dependsOnMethods = {"login"}, enabled = true)
+    @Test (dependsOnMethods = {"login"}, groups = "smoke_test")
     public void verifyCheckAll(){
         driver.findElement(By.id("ctl00_MainContent_btnCheckAll")).click();
 

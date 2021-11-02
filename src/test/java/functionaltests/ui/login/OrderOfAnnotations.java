@@ -50,7 +50,7 @@ public class OrderOfAnnotations {
     }
 
 
-    @Test
+    @Test (groups = "smoke_test")
     public void method1(){
         System.out.println("method1");
     }
