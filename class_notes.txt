@@ -26,9 +26,9 @@ TestBase class ->  a super class that holds common actions and variables to enab
                     When TestBase is used every test class must extend from TestBase
                     Usage of TestBase is an example of Inheritance
 
-  Unit Tests -> white box tests that are created by devs,
-  Integration Test -> tests that reveal bugs when individual components/units af the application are integrated together
-  System Testing -> testing the system as a whole
+  Unit Tests -> white box tests that are created by developers, tests the individual units/components that are created by a developer
+  Integration Test -> tests that reveal bugs when individual components/units af the application are integrated together, tests the application's integrated modules
+  System Test -> tests that test the system as a whole, rather than individual components or integrated modules
 
   As a QA/SDET we are responsible for setting up, maintenance and execution of Smoke, Regression test suites.
   Smoke Test -> tests that cover critical functionalities of the Application,
@@ -36,10 +36,12 @@ TestBase class ->  a super class that holds common actions and variables to enab
                         at the end of each sprint to find out if the newly added features didn't break the existing ones
 
 
-  .gitignore file -> every project is going to have some folders and file/file types that are not relevant or pointless
-                     to be version controlled such as .class files (bytcode), report folders/files. So to not to track them with we put them into a
-                     file called .gitignore
+  .gitignore file -> every project is going to have some folders and files/file types that are not relevant or pointless
+                     to be version controlled such as .class files (bytecode), report files/folders, IDE files/folders. So in order not to track/ignore them with version control,
+                     we put the names of those folders and files/file types into a file called .gitignore in each line and
+                     add it to the root level of our project BEFORE starting to track the folder with version control (for example with Git, before git init)
 
 
-
+   Hard vs Soft assertions -> hard assertions throw exception right away if they fail whereas soft assertions keep the execution and throw the exception, if any, at the end.
+                              Mainly used when there are multiple assertions in a single test and tester would like to find out the result of all assertions
 
