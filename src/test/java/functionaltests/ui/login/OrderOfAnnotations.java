@@ -1,4 +1,4 @@
-package functionaltests;
+package functionaltests.ui.login;
 
 import org.testng.annotations.*;
 

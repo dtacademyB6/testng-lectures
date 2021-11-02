@@ -8,14 +8,15 @@
 <!--            class names must include package names if there are any-->
             <class name="LoginTests">
                 <methods>
-                    <include name="testLoginUsingValidCredentials2"/>
-                </methods>
-            </class>
+<!--                                       starts with-->
+<!--                    <include name="testLoginUsingInValid.*"/>-->
 
+                    <!--                    ends with-->
+<!--                    <include name=".*1"/>-->
 
-            <class name="LoginTests2">
-                <methods>
-                    <include name="testLoginUsingValidCredentials2"/>
+                    <!--                    contains-->
+                    <include name=".*Credentials.*"/>
+
                 </methods>
             </class>
 

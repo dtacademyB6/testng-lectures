@@ -4,13 +4,13 @@
 <!--test represents subcategory/collection of tests under a suite e.g UI tests, API tests, DB tests -->
     <test name="UI Tests">
 
-        <classes>
-<!--            class names must include package names if there are any-->
-            <class name="LoginTests"/>
-            <class name="LoginTests2"/>
-
-
-        </classes>
+<!--          regression suite -->
+        <packages>
+<!--            matches all packages-->
+<!--            <package name=".*"/>  -->
+<!-- all packages that start with unit-->
+            <package name=".*"/>
+        </packages>
 
 
 

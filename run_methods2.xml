@@ -6,8 +6,18 @@
 
         <classes>
 <!--            class names must include package names if there are any-->
-            <class name="LoginTests"/>
-            <class name="LoginTests2"/>
+            <class name="LoginTests">
+                <methods>
+                    <exclude name="testLoginUsingInValidCredentials4"/>
+                </methods>
+            </class>
+
+
+            <class name="LoginTests2">
+                <methods>
+                    <exclude name="testLoginUsingInValidCredentials4"/>
+                </methods>
+            </class>
 
 
         </classes>

@@ -1,16 +1,13 @@
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
 <!--suite represents your entire test suite -->
-<suite name="All Tests">
+<suite name="Regression Tests">
 <!--test represents subcategory/collection of tests under a suite e.g UI tests, API tests, DB tests -->
     <test name="UI Tests">
 
-        <classes>
-<!--            class names must include package names if there are any-->
-            <class name="LoginTests"/>
-            <class name="LoginTests2"/>
-
-
-        </classes>
+<!--          regression suite -->
+        <packages>
+            <package name=".*"/>
+        </packages>
 
 
 

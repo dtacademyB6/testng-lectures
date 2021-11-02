@@ -1,0 +1,45 @@
+
+10/29/21
+----------
+Test Framework/Test Automation Framework/Test Harness/ -> collection of various tools, libraries and technologies that are brought together for running tests in automated fashion.
+
+2 common types of test frameworks:
+TDD(Test-Driven Development) -> TestNG based
+BDD(Behavior-Driven Development) -> Cucumber+Junit based
+
+
+Framework components:
+Java -> write the entire automation code
+Selenium -> write automation scripts for UI testing
+WebDriverManager(bonigarcia) -> to automate the WebDriver setup and manage browser drivers
+Maven -> manage dependencies, build the project / run the tests thru cmd
+TestNG -> organize and configure the execution of the tests through annotations
+
+
+11/01/21
+
+---------------------------------------------
+
+TestNG xml file - to control how we are running tests
+TestBase class ->  a super class that holds common actions and variables to enable re-usability and maintainability
+                    (configuration related methods with @Before, @After annotations)
+                    When TestBase is used every test class must extend from TestBase
+                    Usage of TestBase is an example of Inheritance
+
+  Unit Tests -> white box tests that are created by devs,
+  Integration Test -> tests that reveal bugs when individual components/units af the application are integrated together
+  System Testing -> testing the system as a whole
+
+  As a QA/SDET we are responsible for setting up, maintenance and execution of Smoke, Regression test suites.
+  Smoke Test -> tests that cover critical functionalities of the Application,
+  Regression Test -> tests that find out if the application has regression, usually includes all our tests and ran periodically, for example,
+                        at the end of each sprint to find out if the newly added features didn't break the existing ones
+
+
+  .gitignore file -> every project is going to have some folders and file/file types that are not relevant or pointless
+                     to be version controlled such as .class files (bytcode), report folders/files. So to not to track them with we put them into a
+                     file called .gitignore
+
+
+
+
