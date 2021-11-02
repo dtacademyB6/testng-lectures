@@ -1,6 +1,6 @@
 package unittests;
 
-import functionaltests.ui.login.TestBase;
+import functionaltests.TestBase;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.testng.Assert;

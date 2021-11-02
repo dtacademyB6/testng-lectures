@@ -1,4 +1,4 @@
-package functionaltests.ui.login;
+package functionaltests;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
