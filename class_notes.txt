@@ -45,3 +45,30 @@ TestBase class ->  a super class that holds common actions and variables to enab
    Hard vs Soft assertions -> hard assertions throw exception right away if they fail whereas soft assertions keep the execution and throw the exception, if any, at the end.
                               Mainly used when there are multiple assertions in a single test and tester would like to find out the result of all assertions
 
+
+
+
+  11/3/21
+  ________________________________________
+
+
+    How do you pass parameters to your method in TestNG?
+
+    We can pass it through xml file by adding the parameters into the xml file with <parameter> tag first
+    and then in our @Test method add @Parameters annotation
+    NOTE: The order of parameter names in @Parameters annotation and the method parameters' order must match
+
+
+    Data-Driven Testing - technique of running the same tests with different sets of data where data is fed from external sources
+                          rather than being hardcoded into the test script.
+
+
+    Test Coverage ->     percentage of implemented tests in relation to the requirements. Usually it should be above 80%.
+                         You determine the test coverage with RTM(Requirements Traceability Matrix)
+
+    Black-box testing techniques -> Boundary Value Analysis, Equivalence Partitioning
+
+
+
+
+

@@ -1,0 +1,36 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+<!--suite represents your entire test suite -->
+<suite name="All Tests">
+<!--test represents subcategory/collection of tests under a suite e.g UI tests, API tests, DB tests -->
+    <test name="UI Tests">
+
+        <parameter name="homepage" value="http://secure.smartbearsoftware.com/samples/TestComplete12/WebOrders/Login.aspx"/>
+        <parameter name="googleHome" value="https://www.google.com/"/>
+        <parameter name="usr" value="Tester"/>
+        <parameter name="pass" value="test"/>
+
+        <parameter name="param1" value="2021"/>
+
+        <parameter name="param2" value="true"/>
+
+        <parameter name="param3" value="3.14"/>
+
+
+        <classes>
+<!--            class names must include package names if there are any-->
+            <class name="functionaltests.ParametrizedTests">
+
+            </class>
+
+        </classes>
+
+
+
+    </test>
+
+
+
+
+
+
+</suite>

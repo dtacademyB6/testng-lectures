@@ -1,10 +1,16 @@
 package functionaltests;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
+import org.apache.commons.io.FileUtils;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.ITestResult;
 import org.testng.annotations.*;
 
+import java.io.File;
+import java.io.IOException;
 import java.time.Duration;
 
 public class TestBase {
@@ -46,8 +52,18 @@ public class TestBase {
     }
 
     @AfterMethod (alwaysRun = true)
-    public void tearDownMethod(){
+    public void tearDownMethod(ITestResult testResult) throws IOException {
+        // add the takeScreenshot logic if test fails here
+        if(testResult.getStatus() == ITestResult.FAILURE){
+            TakesScreenshot ts = (TakesScreenshot) driver;
+            File screenshotAs = ts.getScreenshotAs(OutputType.FILE);
+            FileUtils.copyFile(screenshotAs, new File("screenshots/failed" +System.currentTimeMillis() +".png"));
+        }
+
         driver.quit();
     }
+
+
+
 
 }
